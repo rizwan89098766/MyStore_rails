@@ -1,0 +1,30 @@
+<footer class="bg-gray-100 dark:bg-black text-center py-6 mt-12 border-t dark:text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+    <p>&copy; <%= Time.current.year %> MyStore. All rights reserved.</p>
+
+    <div class="flex items-center space-x-2">
+      <%# Safely determine the store (use default if current_store is not available) %>
+      <% 
+        store = defined?(current_store) && current_store ? current_store : Spree::Store.default 
+        available_locales = store.available_locales.map do |locale|
+          [
+            I18n.t('spree.i18n.this_file_language', locale: locale),
+            locale
+          ]
+        end 
+      %>
+
+      <label for="locale-select" class="sr-only">Select Language</label>
+      <select
+        id="locale-select"
+        class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-2 py-1 text-sm"
+        onchange="window.location.href='?locale=' + this.value">
+        <% available_locales.each do |label, locale_code| %>
+          <option value="<%= locale_code %>" <%= 'selected' if I18n.locale.to_s == locale_code %>>
+            <%= label %>
+          </option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+</footer>

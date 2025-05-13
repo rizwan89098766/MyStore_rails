@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - Our Store</title>
+  <style>
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem 2.5rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 0.3rem;
+    }
+    p.lead {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      position: relative;
+      padding-right: 25px;
+      user-select: none;
+      color: #2c3e50;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: #e67e22;
+      transition: transform 0.3s ease;
+    }
+    .faq-question.active::after {
+      content: '−';
+      transform: translateY(-50%);
+      color: #d45e05;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      font-weight: normal;
+      margin-top: 0.5rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .faq-answer.show {
+      max-height: 500px; /* large enough to show content */
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .faq-question {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Frequently Asked Questions</h1>
+      <p class="lead">Find answers to common questions about Our Store</p>
+    </header>
+
+    <div class="faq-item">
+      <div class="faq-question">What is your return policy?</div>
+      <div class="faq-answer">
+        We offer a 30-day return policy from the date of purchase. Items must be unused and in original packaging.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does shipping take?</div>
+      <div class="faq-answer">
+        Standard shipping typically takes 5-7 business days. Expedited shipping options are available at checkout.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you ship internationally?</div>
+      <div class="faq-answer">
+        Yes, we ship to most countries worldwide. Shipping costs and times vary depending on the destination.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I track my order?</div>
+      <div class="faq-answer">
+        Once your order ships, you will receive a tracking number via email to monitor your package’s progress.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What payment methods do you accept?</div>
+      <div class="faq-answer">
+        We accept Visa, MasterCard, American Express, Discover, and PayPal.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const isActive = question.classList.contains('active');
+        // Close all answers
+        document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
+        if (!isActive) {
+          question.classList.add('active');
+          question.nextElementSibling.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

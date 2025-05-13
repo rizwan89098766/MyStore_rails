@@ -1,0 +1,3 @@
+class StorefrontController < ApplicationController
+   
+end

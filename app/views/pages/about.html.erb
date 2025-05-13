@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Our Store</title>
+  <style>
+
+    .container {
+      max-width: 720px;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+      font-style: italic;
+      margin: 0;
+    }
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.3rem;
+      color: #444;
+    }
+    .highlight {
+      color: #e67e22;
+      font-weight: 700;
+    }
+    .highlight-box {
+      border-left: 5px solid #e67e22;
+      border-right: 5px solid #e67e22;
+      background-color: #fff3e0;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+    .why-choose-us {
+      margin-top: 50px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+      font-style: italic;
+    }
+    .features {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .feature-item {
+      flex: 1 1 45%;
+      background-color: #fff8f0;
+      border: 2px solid #e67e22;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(230, 126, 34, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(230, 126, 34, 0.3);
+    }
+    .feature-icon {
+      font-size: 40px;
+      color: #e67e22;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .feature-description {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+      .container {
+        padding: 30px 20px;
+      }
+      .features {
+        flex-direction: column;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>About Our Store</h1>
+      <p>Your trusted source for quality products</p>
+    </header>
+    <section>
+      <p>Welcome to <span class="highlight">Our Store</span>, where quality meets affordability. Founded in 2020, we have dedicated ourselves to providing a wide range of products that meet your everyday needs with an emphasis on excellent customer service.</p>
+      <div class="highlight-box">
+        <h2>Our Mission</h2>
+        <p>To offer you not just products, but solutions that simplify your life. Whether you're looking for the latest gadgets, home essentials, or unique gifts, we have something for you.</p>
+      </div>
+      <p>With over 10,000 satisfied customers and growing, we're committed to continuous improvement and innovation in our product offerings.</p>
+    </section>
+
+    <section class="why-choose-us">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">Here's what makes us different</p>
+      <div class="features">
+        <div class="feature-item" tabindex="0" role="region" aria-label="Premium Quality">
+          <div class="feature-icon" aria-hidden="true">💎</div>
+          <h3 class="feature-title">Premium Quality</h3>
+          <p class="feature-description">Every product is carefully selected to meet our high standards of quality.</p>
+        </div>
+        <div class="feature-item" tabindex="0" role="region" aria-label="Best Prices">
+          <div class="feature-icon" aria-hidden="true">💰</div>
+          <h3 class="feature-title">Best Prices</h3>
+          <p class="feature-description">We offer competitive pricing without compromising on quality.</p>
+        </div>
+        <div class="feature-item" tabindex="0" role="region" aria-label="Great Customer Support">
+          <div class="feature-icon" aria-hidden="true">🤝</div>
+          <h3 class="feature-title">Great Customer Support</h3>
+          <p class="feature-description">Our friendly support team is here to help you with any questions or concerns.</p>
+        </div>
+        <div class="feature-item" tabindex="0" role="region" aria-label="Fast and Reliable Shipping">
+          <div class="feature-icon" aria-hidden="true">🚚</div>
+          <h3 class="feature-title">Fast and Reliable Shipping</h3>
+          <p class="feature-description">We ensure your orders arrive on time and in perfect condition.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
