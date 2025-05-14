@@ -1,0 +1,4 @@
+--2025-05-13 22:16:49--  https://fly.io/install.sh
+Resolving fly.io (fly.io)... 37.16.18.81, 2a09:8280:1::a:791
+Connecting to fly.io (fly.io)|37.16.18.81|:443... connected.
+Unable to establish SSL connection.
